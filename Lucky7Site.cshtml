@@ -1,0 +1,46 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<style>
+    body {
+        background-color: beige;
+    }
+    div {
+        display: inline-block;
+        background-color: yellow;
+        font-size: 52px;
+        border: 1px;
+        border-color: #00000;
+        border-style: solid;
+        padding: 1px;
+    }
+</style>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Lucky 7</title>
+</head>
+<body>
+    
+    <button onclick="history.go(0)">Spin</button>
+
+
+    @{
+        Random rnd = new Random();
+        int a = rnd.Next(0, 10);
+        int b = rnd.Next(0, 10);
+        int c = rnd.Next(0, 10);
+
+        <div>@a</div><div>@b</div><div>@c</div>
+
+        <H1>Lucky Seven</H1>
+        if (a == 7 || b == 7 || c == 7)
+        {
+            <img src= "http://faculty.cascadia.edu/brianb/bit285/exercises/lucky7/LuckySevenExercise.jpg"/> 
+        }
+    }
+
+</body>
+</html>
